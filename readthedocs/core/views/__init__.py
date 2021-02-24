@@ -25,7 +25,7 @@ class NoProjectException(Exception):
 
 class HealthCheckView(View):
     def get(self, request, *args, **kwargs):
-        return JsonResponse({'ok'}, status=200)
+        return JsonResponse({'status': 200}, status=200)
 
 
 class HomepageView(TemplateView):

@@ -40,7 +40,7 @@ class TestFullDocServing(BaseDocServing):
         host = 'project.dev.readthedocs.io'
         resp = self.client.get(url, HTTP_HOST=host)
         self.assertEqual(resp.status_code, 200)
-        self.assertEqual(resp.json, {'ok'})
+        self.assertEqual(resp.json, {'status': 200})
 
     def test_subproject_serving(self):
         url = '/projects/subproject/en/latest/awesome.html'
